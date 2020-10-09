@@ -1,0 +1,14 @@
+.checkout_ad{
+    width: 950px;
+    height: 40vh;
+    margin-right: 25px;
+}
+.text{
+    align-items: center;
+}
+.checkout{
+   display: flex;
+   padding: 10px;
+   background-color: white;
+   height: max-content;   
+}
