@@ -17,7 +17,8 @@ const Checkout = () => {
               <div className="text">
               <h2>Your Cart Is Empty.</h2>
               <h3>Fill it with more items. To shop click on "Add To Cart" below the item.</h3>
-              <h3>Happy Shopping 🤗</h3>
+              {/* // eslint-disable-next-line */}
+              <h3>Happy Shopping <span>🤗</span></h3>
               </div>
            ):(
             <div>

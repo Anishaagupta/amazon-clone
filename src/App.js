@@ -10,7 +10,7 @@ import {auth} from "./utils/firebase";
 
 const App = () => {
 
-  const [{user}, dispatch] = useStateValue();
+  const [user, dispatch] = useStateValue();
 
   useEffect(() => {
 
@@ -25,7 +25,7 @@ const App = () => {
       // Any cleanup operation go in here... such as timer
       unsubscribe();
     }
-  }, [])
+  });
   return (
    <Router>
       <div className="App">
