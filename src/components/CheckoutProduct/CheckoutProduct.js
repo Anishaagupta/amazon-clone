@@ -21,7 +21,7 @@ const CheckoutProduct = ({id,title,image,price,rating}) => {
                    <strong>{price}</strong>
                 </p>
                 <div className="checkoutP_rating">
-                    {Array(rating).fill().map((_, i)=>(<span>s</span>))}
+                    {Array(rating).fill().map((_, i)=>(<span>⭐</span>))}
                 </div>
                 <button onClick={removeFromCart}>Remove From Cart</button>
             </div>
