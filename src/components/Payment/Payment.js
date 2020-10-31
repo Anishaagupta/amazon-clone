@@ -9,7 +9,7 @@ const Payment = () => {
     const order = (e) =>{
         e.preventDefault();
         alert("Your order has been placed.")
-        return history.push("/");
+        return history.push("/thankyou");
     }
 
     return (
