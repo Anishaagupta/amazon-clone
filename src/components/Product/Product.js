@@ -3,6 +3,7 @@ import './Product.css';
 import {useStateValue} from '../../StateProvider';
 
 const Product = ({id,title,price,rating,image}) => {
+     // eslint-disable-next-line
     const [{cart}, dispatch] = useStateValue();
     const addToCart = () =>{
             dispatch({
@@ -21,7 +22,7 @@ const Product = ({id,title,price,rating,image}) => {
         </p>
         <div className="product_rating">
             {
-            Array(rating).fill().map((_)=>(<span>⭐</span>))
+            Array(rating).fill().map((_)=>(<span role="img" aria-label="star">⭐</span>))
             }
         </div>
 

@@ -3,11 +3,10 @@ import './Checkout.css';
 import {useStateValue} from '../../StateProvider';
 import CheckoutProduct from '../CheckoutProduct/CheckoutProduct';
 import Subtotal from '../Subtotal/Subtotal';
-
+import {Link} from "react-router-dom";
 const Checkout = () => {
-
+      // eslint-disable-next-line
     const [{cart}] = useStateValue();
-
     return (
         <div className="checkout">
         <div className="checkout_left">
@@ -17,7 +16,8 @@ const Checkout = () => {
               <div className="text">
               <h2>Your Cart Is Empty.</h2>
               <h3>Fill it with more items. To shop click on "Add To Cart" below the item.</h3>
-              <h3>Happy Shopping 🤗</h3>
+              <h3>Happy Shopping <span role="img" aria-label="smiley">🤗</span></h3>
+              <div style={{display:"flex", justifyContent:"center"}}><h5 style={{marginTop:"3px"}}>Click Here</h5><Link to="/"><h3> Go Back</h3></Link></div>
               </div>
            ):(
             <div>

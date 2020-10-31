@@ -3,6 +3,7 @@ import { useStateValue } from '../../StateProvider';
 import './CheckoutProduct.css';
 
 const CheckoutProduct = ({id,title,image,price,rating}) => {
+     // eslint-disable-next-line
     const [{cart},dispatch] = useStateValue();
 
     const removeFromCart = () => {
@@ -21,7 +22,7 @@ const CheckoutProduct = ({id,title,image,price,rating}) => {
                    <strong>{price}</strong>
                 </p>
                 <div className="checkoutP_rating">
-                    {Array(rating).fill().map((_, i)=>(<span>⭐</span>))}
+                    {Array(rating).fill().map((_, i)=>(<span key="1" role="img" aria-label="star">⭐</span>))}
                 </div>
                 <button onClick={removeFromCart}>Remove From Cart</button>
             </div>

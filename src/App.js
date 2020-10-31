@@ -5,11 +5,15 @@ import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Checkout from './components/Checkout/Checkout';
 import Login from './components/Login/Login';
+import SignUp from './components/SignUp/SignUp';
 import {useStateValue} from './StateProvider';
 import {auth} from "./utils/firebase"; 
+import Payment from './components/Payment/Payment';
+import Address from './components/Address/Address';
+import Thankyou from './components/Thankyou/Thankyou';
 
 const App = () => {
-
+    // eslint-disable-next-line
   const [{user}, dispatch] = useStateValue();
 
   useEffect(() => {
@@ -25,7 +29,7 @@ const App = () => {
       // Any cleanup operation go in here... such as timer
       unsubscribe();
     }
-  }, [])
+  }, [dispatch])
   return (
    <Router>
       <div className="App">
@@ -36,6 +40,18 @@ const App = () => {
          </Route>
          <Route exact path="/login">
             <Login/>
+         </Route>
+         <Route exact path="/signUp">
+            <SignUp/>
+         </Route>
+         <Route exact path="/address">
+            <Address/>
+         </Route>
+         <Route exact path="/payment">
+            <Payment/>
+         </Route>
+         <Route exact path="/thankyou">
+            <Thankyou/>
          </Route>
          <Route exact path="/">
             <Header/>
